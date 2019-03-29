@@ -1,0 +1,45 @@
+[33mcommit 767b43d1bff6d621dd04e556b076dbe8dc6f0a76[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: JodenilsonFreitas <jodenilsondefreitas@gmail.com>
+Date:   Fri Mar 29 19:40:24 2019 -0300
+
+    first commit
+
+[33mcommit 32173d2a5ef243eab053e643347b506e2a7a2c5f[m
+Author: JodenilsonFreitas <jodenilsondefreitas@gmail.com>
+Date:   Fri Mar 29 19:38:58 2019 -0300
+
+    first commit
+
+[33mcommit 8b4c296d4e4a7210a4e95f24ca189a3ae96d6c25[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 49addcf 5f6be2f
+Author: didin jamaludin <didinj@gmail.com>
+Date:   Thu Aug 16 09:59:31 2018 +0700
+
+    Merge branch 'master' of https://github.com/didinj/ionic4-angular6-firebase-crud-example
+
+[33mcommit 49addcf2de56671e2858093162f80cd4be0b5bfa[m
+Author: didin jamaludin <didinj@gmail.com>
+Date:   Thu Aug 16 09:59:24 2018 +0700
+
+    update README
+
+[33mcommit 5f6be2f6c2573793863f0c945cf8d6604a90fe37[m
+Merge: f655a02 bee9dfc
+Author: Didin Jamaludin <didinj@gmail.com>
+Date:   Thu Aug 16 09:03:10 2018 +0700
+
+    Merge pull request #1 from didinj/add-license-1
+    
+    Create LICENSE
+
+[33mcommit bee9dfca5fbebad820e7a68495c22ea268160409[m[33m ([m[1;31morigin/add-license-1[m[33m)[m
+Author: Didin Jamaludin <didinj@gmail.com>
+Date:   Thu Aug 16 09:02:46 2018 +0700
+
+    Create LICENSE
+
+[33mcommit f655a02a65ef3d3338595b91b5d061b53ac03e78[m
+Author: didin jamaludin <didinj@gmail.com>
+Date:   Thu Aug 16 09:01:43 2018 +0700
+
+    First commit

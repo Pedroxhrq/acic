@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
 import * as firebase from 'Firebase';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-cadastro-beneficio',
+  templateUrl: './cadastro-beneficio.page.html',
+  styleUrls: ['./cadastro-beneficio.page.scss'],
 })
-export class HomePage {
-
+export class CadastroBeneficioPage {
+  
   infos = [];
   ref = firebase.database().ref('infos/');
+
 
   constructor(private route: ActivatedRoute, public router: Router, public alertController: AlertController) {
     this.ref.on('value', resp => {
@@ -47,7 +48,6 @@ export class HomePage {
 
     await alert.present();
   }
-
 }
 
 export const snapshotToArray = snapshot => {

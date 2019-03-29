@@ -6,11 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase';
 
 const config = {
-  apiKey: 'AIzaSyC2lj_yaQ1-OqYzxpJhjdbVRSS15p20jQM',
-  authDomain: 'bulletinboard-d4583.firebaseapp.com',
-  databaseURL: 'https://bulletinboard-d4583.firebaseio.com/',
-  projectId: 'bulletinboard-d4583',
-  storageBucket: 'gs://bulletinboard-d4583.appspot.com',
+  apiKey: "AIzaSyAmz8rGI01eIUGAc5nM40IjdPIdCH3s0u8",
+  authDomain: "banco-bed46.firebaseapp.com",
+  databaseURL: "https://banco-bed46.firebaseio.com",
+  projectId: "banco-bed46",
+  storageBucket: "banco-bed46.appspot.com",
+  messagingSenderId: "42293200054"
 };
 @Component({
   selector: 'app-root',

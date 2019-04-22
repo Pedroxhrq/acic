@@ -11,18 +11,36 @@ import * as firebase from 'Firebase';
 export class CadastroBeneficioPage {
   
   infos = [];
+  listaInfos =[];
   ref = firebase.database().ref('infos/');
 
 
   constructor(private route: ActivatedRoute, public router: Router, public alertController: AlertController) {
     this.ref.on('value', resp => {
-      this.infos = [];
+
       this.infos = snapshotToArray(resp);
+      this.listaInfos = this.infos;
     });
   }
 
   edit(key) {
     this.router.navigate(['/edit/'+key]);
+  }
+
+  filtrarItens(searchbar) {
+    this.infos = this.listaInfos;
+    var q = searchbar.srcElement.value;
+    if (!q) {
+      return;
+    }
+    this.infos = this.infos.filter((v) => {
+      if(v.info_title && q) {
+        if (v.info_title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+          return true;
+        }
+          return false;
+      }
+    });
   }
 
   async delete(key) {

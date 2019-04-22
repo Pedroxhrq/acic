@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Novo Emprego</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form [formGroup]="empregoForm">
+  
+      <ion-item>
+        <ion-label position="floating">Cargo</ion-label>
+        <ion-input type="text" formControlName="emprego_cargo"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Empresa</ion-label>
+        <ion-input type="text" formControlName="emprego_empresa"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label position="floating">Remuneração</ion-label>
+          <ion-input type="text" formControlName="emprego_remuneracao"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label position="floating">Descrição</ion-label>
+            <ion-input type="text" formControlName="emprego_descricao"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label position="floating">Telefone</ion-label>
+              <ion-input type="text" formControlName="emprego_telefone"></ion-input>
+            </ion-item>
+      
+            <ion-item>
+                <ion-label position="floating">E-mail</ion-label>
+                <ion-input type="text" formControlName="emprego_email"></ion-input>
+              </ion-item>
+        
+  
+      <ion-button shape="round" color="primary" expand="block"  (click)="saveEmprego()">Salvar</ion-button>
+    </form>
+  </ion-content>
+  
+  

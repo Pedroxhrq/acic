@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Associado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="associadoForm">
+
+    <ion-item>
+      <ion-label position="floating">Nome Fantasia</ion-label>
+      <ion-input type="text" formControlName="associado_nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Razão</ion-label>
+      <ion-input type="text" formControlName="associado_razao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="associado_email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Telefone</ion-label>
+          <ion-input type="text" formControlName="associado_telefone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Cidade</ion-label>
+            <ion-input type="text" formControlName="associado_cidade"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+              <ion-label position="floating">Site</ion-label>
+              <ion-input type="text" formControlName="associado_site"></ion-input>
+            </ion-item>
+      
+
+    <ion-button shape="round" color="primary" expand="block"  (click)="saveAssociado()">Salvar</ion-button>
+  </form>
+</ion-content>
+

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+  
+      <ion-title>
+       Home Emprego
+      </ion-title> 
+   
+      <ion-buttons slot="end">
+        
+        <ion-button routerLink="/createEmprego"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+    <ion-searchbar placeholder="Buscar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
+  </ion-header>
+  
+  <ion-content>
+   
+    
+    
+      <ion-list>
+      
+      <ion-item-sliding *ngFor="let emprego of empregos">
+          <ion-card>
+            <ion-item  detail lines="" routerLink="/detailEmprego/{{emprego.key}}">
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+          {{emprego.emprego_cargo}}
+          
+      </ion-item>
+      <ion-item >
+        
+         Preenchida <ion-icon name="checkmark" color="secondary" (click)="delete(emprego.key)" slot="end"></ion-icon>
+        </ion-item>
+  
+      </ion-card>
+      </ion-item-sliding>
+   
+    </ion-list>
+  
+  </ion-content>
+  

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+    <ion-title>
+     Home page dos eventos
+    </ion-title> 
+ 
+    <ion-buttons slot="end">
+      
+      <ion-button routerLink="/createEvento"><ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+  <ion-searchbar placeholder="Buscar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
+</ion-header>
+
+<ion-content>
+ 
+  
+  
+    <ion-list>
+    
+    <ion-item-sliding *ngFor="let evento of eventos">
+        <ion-card>
+          <ion-item  detail lines="" routerLink="/detailEvento/{{evento.key}}">
+        <ion-icon name="people" slot="start"></ion-icon>
+        {{evento.evento_titulo}}
+        
+    </ion-item>
+    <ion-item >
+        <ion-icon name="create" color="primary" (click)="editEvento(evento.key)" slot="end"></ion-icon>
+        <ion-icon name="trash" color="danger" (click)="delete(evento.key)" slot="end"></ion-icon>
+      </ion-item>
+
+    </ion-card>
+    </ion-item-sliding>
+ 
+  </ion-list>
+
+</ion-content>

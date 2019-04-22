@@ -2,6 +2,7 @@
   <ion-toolbar>
       <ion-buttons slot="start">
           <ion-back-button></ion-back-button>
+        
         </ion-buttons>
 
     <ion-title>
@@ -14,17 +15,19 @@
     </ion-buttons>
   </ion-toolbar>
 
+  <ion-searchbar placeholder="Buscar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
+    
 </ion-header>
 
 <ion-content>
    
-  
+
   <ion-list>
     
     <ion-item-sliding *ngFor="let info of infos">
         <ion-card>
       <ion-item  detail lines="" routerLink="/detail/{{info.key}}">
-        <ion-icon name="desktop" slot="start"></ion-icon>
+        <ion-icon name="pricetag" slot="start"></ion-icon>
         {{info.info_title}}
       
     </ion-item>

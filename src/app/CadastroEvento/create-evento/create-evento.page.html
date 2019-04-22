@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="eventoForm">
+
+    <ion-item>
+      <ion-label position="floating">Nome Titulo</ion-label>
+      <ion-input type="text" formControlName="evento_titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data</ion-label>
+      <ion-input type="text" formControlName="evento_data"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Hora</ion-label>
+        <ion-input type="text" formControlName="evento_hora"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Local</ion-label>
+          <ion-input type="text" formControlName="evento_local"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Telefone</ion-label>
+            <ion-input type="text" formControlName="evento_telefone"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+              <ion-label position="floating">Preço Associado</ion-label>
+              <ion-input type="text" formControlName="evento_precoAssociado"></ion-input>
+            </ion-item>
+
+
+            <ion-item>
+              <ion-label position="floating">Descrição</ion-label>
+              <ion-input type="text" formControlName="evento_descricao"></ion-input>
+            </ion-item>
+      
+
+            <ion-item>
+              <ion-label position="floating">Preço não Associado</ion-label>
+              <ion-input type="text" formControlName="evento_preco"></ion-input>
+            </ion-item>
+      
+      
+
+    <ion-button shape="round" color="primary" expand="block"  (click)="saveEvento()">Salvar</ion-button>
+  </form>
+</ion-content>
+

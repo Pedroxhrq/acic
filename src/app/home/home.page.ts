@@ -1,24 +1,64 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController, ActionSheetController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
 import * as firebase from 'Firebase';
+import { MenuController } from '@ionic/angular'
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+
 export class HomePage {
 
   infos = [];
   ref = firebase.database().ref('infos/');
 
-  constructor(private route: ActivatedRoute, public router: Router, public alertController: AlertController) {
+  constructor( private actionSheetCtrl:ActionSheetController,  private route: ActivatedRoute, public router: Router, public alertController: AlertController) {
     this.ref.on('value', resp => {
       this.infos = [];
       this.infos = snapshotToArray(resp);
     });
   }
+  
+ async abrirPagina(){
+    let actionSheet = await this.actionSheetCtrl.create({
+      header: 'Action',
+      buttons:[ 
+        {
+          text:'Empregos',
+           role:'desctructive',
+           icon:'home',
+           handler:()=>
+               {
+                this.router.navigate(['/createEmprego']);
+                }
+        },
+        
+        {
+          text:'Empregoss',
+           role:'desctructive',
+           icon:'home',
+           handler:()=>
+               {
+                  console.log('ver');
+                }
+        }
+
+
+
+  
+]
+
+});
+
+
+await actionSheet.present();
+
+ }
+
 
   edit(key) {
     this.router.navigate(['/edit/'+key]);

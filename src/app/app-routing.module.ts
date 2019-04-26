@@ -20,9 +20,6 @@ const routes: Routes = [
   { path: 'homeEvento', loadChildren: './CadastroEvento/home-evento/home-evento.module#HomeEventoPageModule' },
   { path: 'createEvento', loadChildren: './CadastroEvento/create-evento/create-evento.module#CreateEventoPageModule' },
   { path: 'detailEvento/:key', loadChildren: './CadastroEvento/detail-evento/detail-evento.module#DetailEventoPageModule' },
-  { path: 'editEvento/:key', loadChildren: './CadastroEvento/edit-evento/edit-evento.module#EditEventoPageModule' },
-
-
 
  
 

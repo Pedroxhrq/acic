@@ -33,3 +33,4 @@ export class AppComponent {
     firebase.initializeApp(config);
   }
 }
+console.log();

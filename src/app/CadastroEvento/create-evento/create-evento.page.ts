@@ -14,7 +14,6 @@ export class CreateEventoPage  {
   ref = firebase.database().ref('eventos/');
   eventoForm: FormGroup;
 
-
   constructor(private route: ActivatedRoute,
     public router: Router,
     private formBuilder: FormBuilder) { 

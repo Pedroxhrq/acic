@@ -19,7 +19,9 @@ const routes: Routes = [
   { path: 'detailEmprego/:key', loadChildren: './CadastroEmprego/detail-emprego/detail-emprego.module#DetailEmpregoPageModule' },
   { path: 'homeEvento', loadChildren: './CadastroEvento/home-evento/home-evento.module#HomeEventoPageModule' },
   { path: 'createEvento', loadChildren: './CadastroEvento/create-evento/create-evento.module#CreateEventoPageModule' },
-  { path: 'detailEvento/:key', loadChildren: './CadastroEvento/detail-evento/detail-evento.module#DetailEventoPageModule' },
+  { path: 'detailEvento/:key', loadChildren: './CadastroEvento/detail-evento/detail-evento.module#DetailEventoPageModule' },  { path: 'Noticia', loadChildren: './noticia/noticia.module#NoticiaPageModule' },
+  { path: 'noticiaBeta', loadChildren: './noticia-beta/noticia-beta.module#NoticiaBetaPageModule' },
+
 
  
 

@@ -12,6 +12,7 @@ const config = {
   storageBucket: "banco-bed46.appspot.com",
   messagingSenderId: "42293200054"
 };
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'

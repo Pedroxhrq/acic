@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        
+        </ion-buttons>
+
+    <ion-title>
+    Noticias
+    </ion-title> 
+
+  </ion-toolbar>
+
+    
+</ion-header>
+
+<ion-content>
+   
+
+  <ion-list>
+    
+    <ion-item-sliding *ngFor="let noticia of noticias">
+        <ion-card>
+      <ion-item  detail lines="" >
+        <ion-icon name="pricetag" slot="start"></ion-icon>
+      
+        <p> {{noticia.titulo}}</p>
+        <!--<p> {{noticia.descricao}}</p>-->
+        <p> {{noticia.guid}}</p>
+        <p> {{noticia.pubDate}}</p>
+
+
+      
+    </ion-item>
+
+    </ion-card>
+    </ion-item-sliding>
+ 
+  </ion-list>
+
+</ion-content>

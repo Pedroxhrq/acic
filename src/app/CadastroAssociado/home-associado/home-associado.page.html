@@ -4,17 +4,16 @@
           <ion-back-button></ion-back-button>
         </ion-buttons>
 
-    <ion-title>
-     Home page dos associados
-    </ion-title> 
+    <ion-title>Associados</ion-title>
  
-    <ion-buttons slot="end">
-      
-      <ion-button routerLink="/createAssociado"><ion-icon name="add-circle"></ion-icon></ion-button>
-    </ion-buttons>
+    <div *ngIf="admin">
+      <ion-buttons slot="end">
+        <ion-button routerLink="/createAssociado"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
     
   </ion-toolbar>
-  <ion-searchbar placeholder="Buscar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
+  <ion-searchbar placeholder="Pesquisar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
 </ion-header>
 
 <ion-content>
@@ -28,12 +27,14 @@
           <ion-item  detail lines="" routerLink="/detailAssociado/{{associado.key}}">
         <ion-icon name="people" slot="start"></ion-icon>
         {{associado.associado_nome}}
-        
     </ion-item>
-    <ion-item >
+
+    <div *ngIf="admin">
+      <ion-item >
         <ion-icon name="create" color="primary" (click)="editAssociado(associado.key)" slot="end"></ion-icon>
         <ion-icon name="trash" color="danger" (click)="delete(associado.key)" slot="end"></ion-icon>
       </ion-item>
+    </div>
 
     </ion-card>
     </ion-item-sliding>

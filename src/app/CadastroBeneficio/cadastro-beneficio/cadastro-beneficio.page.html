@@ -1,44 +1,29 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        
-        </ion-buttons>
-
-    <ion-title>
-     Informações
-    </ion-title> 
- 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Benefícios</ion-title>
     <ion-buttons slot="end">
-      
       <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
-
-  <ion-searchbar placeholder="Buscar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
-    
+  <ion-searchbar placeholder="Pesquisar..."  (ionInput)="filtrarItens($event)" clearInput></ion-searchbar>
 </ion-header>
 
 <ion-content>
-   
-
   <ion-list>
-    
     <ion-item-sliding *ngFor="let info of infos">
-        <ion-card>
-      <ion-item  detail lines="" routerLink="/detail/{{info.key}}">
-        <ion-icon name="pricetag" slot="start"></ion-icon>
-        {{info.info_title}}
-      
-    </ion-item>
-    <ion-item >
-        <ion-icon name="create" color="primary" (click)="edit(info.key)" slot="end"></ion-icon>
-        <ion-icon name="trash" color="danger" (click)="delete(info.key)" slot="end"></ion-icon>
-      </ion-item>
-
-    </ion-card>
+      <ion-card>
+        <ion-item  detail lines="" routerLink="/detail/{{info.key}}">
+          <ion-icon name="pricetag" slot="start"></ion-icon>
+          {{info.info_title}}
+        </ion-item>
+        <ion-item>
+          <ion-icon name="create" color="primary" (click)="edit(info.key)" slot="end"></ion-icon>
+          <ion-icon name="trash" color="danger" (click)="delete(info.key)" slot="end"></ion-icon>
+        </ion-item>
+      </ion-card>
     </ion-item-sliding>
- 
   </ion-list>
-
 </ion-content>
